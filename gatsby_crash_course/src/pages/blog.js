@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 // get the query data by destructuring data from passed in props
 // here's where we query our posts
