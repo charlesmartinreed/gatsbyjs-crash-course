@@ -23,7 +23,8 @@
 
 ---
 
-Universal styles can be found and edited from the layout.css file, located in the components folder of your project.
+- By default, Gatsby doesn't load in any stylesheets. Import it in a proper component, like layout.js.
+- Gatsby does support css pre-processors like SASS, via plugins.
 
 ## A few notes on the blog system in this example
 

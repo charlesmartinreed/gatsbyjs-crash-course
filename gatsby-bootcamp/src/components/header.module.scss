@@ -1,0 +1,35 @@
+/* using CSS modules which have the benefit of ensuring that class names and animation names are scoped locally by default, thus avoid namespace clashes */
+
+/* in this example, we're only targeting the links in the component via css modules. Compare this to using classNames, which gives us specificity but doesn't preclude other items with the same classNames in other nested components */
+
+/* because these are consumed like JS objects, we get a default export. Then, when integrating this style sheet, we simply import that named default */
+.header {
+  padding: 1rem 0 3rem;
+}
+
+.title {
+  color: #000;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-item {
+  color: #999999;
+  font-size: 0.9rem;
+  margin-right: 1.3rem;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: #666;
+}
+
+.active-nav-item {
+  color: #333;
+}
