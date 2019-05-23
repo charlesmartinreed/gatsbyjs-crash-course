@@ -1,15 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 // why not use the anchor element? With Link, the content can be swapped out instantaneously, without the page reload.
 // Page content is pre-loaded by Gatsby, along with other optimizations.
 
 const IndexPage = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Hey.</h1>
       <h2>
         I'm <Link to="/about">Charles</Link>, an ambitious but ultimately
@@ -19,8 +17,7 @@ const IndexPage = () => {
       <p>
         Need a developer? <Link to="/contact">Contact me.</Link>
       </p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
