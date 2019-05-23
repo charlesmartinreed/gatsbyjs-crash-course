@@ -5,5 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Code All The Things",
+    author: "Charles Martin Reed",
+  },
   plugins: ["gatsby-plugin-sass"],
 }

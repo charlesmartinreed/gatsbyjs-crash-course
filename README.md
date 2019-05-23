@@ -25,6 +25,7 @@
 
 - By default, Gatsby doesn't load in any stylesheets. Import it in a proper component, like layout.js.
 - Gatsby does support css pre-processors like SASS, via plugins.
+- Gatsby uses CSS Modules for ensuring local scope and avoiding namespace clashes; these are, in a nutshell, CSS encapsulated into JavaScript Objects that are imported as default modules in the component where the styling is used.
 
 ## A few notes on the blog system in this example
 
