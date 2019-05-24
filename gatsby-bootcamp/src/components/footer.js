@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -13,7 +14,7 @@ const Footer = () => {
   `)
   const { author } = data.site.siteMetadata
   return (
-    <footer>
+    <footer className={footerStyles.footer}>
       <p>
         Created with plenty of{" "}
         <span role="img" aria-label="heart emoji">
