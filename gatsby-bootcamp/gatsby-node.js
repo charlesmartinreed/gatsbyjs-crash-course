@@ -20,3 +20,38 @@ module.exports.onCreateNode = ({ node, actions }) => {
     })
   }
 }
+
+// Dynamically create pages from slugs in the gatsby nodes list
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  //1. Get path to template
+  const blogTemplate = path.resolve("./src/templates/blog.js")
+
+  //2. Get markdown data using graphql function - this returns promise
+  const res = await graphql(`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  // iterate of all posts, use createPages on each of them
+  res.data.allMarkdownRemark.edges.forEach(edge => {
+    createPage({
+      // component to render, path to page, what if anything should be passed
+      component: blogTemplate,
+      path: `/blog/${edge.node.fields.slug}`,
+      context: {
+        slug: edge.node.fields.slug,
+      },
+    })
+  })
+}
