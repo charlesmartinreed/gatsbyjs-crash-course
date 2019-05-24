@@ -10,6 +10,13 @@ module.exports = {
     author: "Charles Martin Reed",
   },
   plugins: [
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "",
+        accessToken: "",
+      },
+    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
