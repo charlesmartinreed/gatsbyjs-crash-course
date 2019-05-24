@@ -11,6 +11,7 @@ const ContactPage = () => {
         <a
           href="https://twitter.com/supalatecharlie"
           target="_blank"
+          rel="noopener noreferrer"
           alt="Charlie's Twitter Page"
         >
           @supalatecharlie
