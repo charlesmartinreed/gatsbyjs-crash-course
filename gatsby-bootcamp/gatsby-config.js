@@ -11,6 +11,7 @@ module.exports = {
     author: "Charles Martin Reed",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
