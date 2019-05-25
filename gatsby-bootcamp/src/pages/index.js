@@ -16,9 +16,6 @@ const IndexPage = () => {
         unfocused man trying to navigate my way through life as a modern
         developer.
       </h2>
-      <p>
-        Need a developer? <Link to="/contact">Contact me.</Link>
-      </p>
     </Layout>
   )
 }
